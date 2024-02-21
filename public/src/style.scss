@@ -1,0 +1,47 @@
+/* 5 css variables */
+
+$primary-font: 'Quando';
+$secondary-font: 'Josefin Sans', sans-serif;
+$primary-color: #111111;
+$secondary-color: #324360;
+$link-hover-color: #35c4ce;
+
+/* 5 nesting variables */
+body {
+    font-family: Quando;
+    font-size: 15px;
+    color: #787878;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    margin-bottom: 25px;
+    line-height: 1.6em;
+}
+article {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-part {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    background: #eaf2ff;
+    color: #989898;
+}
+
+@mixin transition($properties, $duration: 0.3s, $timing-function: ease) {
+    transition: $properties $duration $timing-function;
+}
+
+@mixin hover-effect {
+    &:hover {
+      color: $link-hover-color;
+    }
+}
